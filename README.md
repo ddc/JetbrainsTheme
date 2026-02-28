@@ -14,46 +14,67 @@
     <a href="https://plugins.jetbrains.com/plugin/30414-ddc-theme"><img src="https://img.shields.io/jetbrains/plugin/d/30414?style=plastic" alt="Marketplace Downloads"/></a>
 </p>
 
-<p align="center">A dark theme for JetBrains IDEs based on Atom dark colors. Includes UI Theme, Editor Theme, VCS Colors, Code Style, and Key Maps.</p>
+<p align="center">A dark theme for JetBrains IDEs based on <a href="https://github.com/atom/atom/tree/master/packages/one-dark-ui">Atom One Dark</a> colors.<br>Includes UI Theme, Editor Theme, VCS Colors, Code Style, and Key Maps.</p>
 
+<p align="center"><b><a href="https://plugins.jetbrains.com/plugin/30414-ddc-theme">Install from JetBrains Marketplace</a></b></p>
 
-**[Install from JetBrains Marketplace](https://plugins.jetbrains.com/plugin/30414-ddc-theme)**
+# Table of Contents
 
-## Table of Contents
-
-- [Included Files](#included-files)
+- [Screenshot](#screenshot)
+- [Features](#features)
 - [Installation](#installation)
+    - [From Marketplace](#from-marketplace)
     - [From Plugin JAR](#from-plugin-jar)
     - [Manual Installation](#manual-installation)
 - [Building](#building)
 - [VCS Colors](#vcs-colors)
+- [Suport](#support)
+- [License](#license)
 
-## Included Files
+# Screenshot
 
-| File                    | Description         |
-|-------------------------|---------------------|
-| `DDC_Theme.json`        | UI Theme            |
-| `DDC_Editor_Theme.icls` | Editor Color Scheme |
-| `DDC_Code_Style.xml`    | Code Style settings |
-| `DDC_Key_Maps.xml`      | Key Maps            |
+<p align="left">
+  <img src="assets/bash_example.png" alt="Editor Theme">
+</p>
 
-## Installation
+# Features
 
-### From Plugin JAR
+| Component     | File                    | Description                                          |
+|---------------|-------------------------|------------------------------------------------------|
+| UI Theme      | `DDC_Theme.json`        | Dark UI with custom backgrounds, borders, and popups |
+| Editor Scheme | `DDC_Editor_Theme.icls` | Syntax highlighting and editor colors                |
+| VCS Colors    | `DDC_Editor_Theme.icls` | Custom file status colors for version control        |
+| Code Style    | `DDC_Code_Style.xml`    | Formatting and indentation settings                  |
+| Key Maps      | `DDC_Key_Maps.xml`      | Custom keyboard shortcuts                            |
+
+# Installation
+
+## From Marketplace
+
+1. In your JetBrains IDE, go to **Settings > Plugins > Marketplace**
+2. Search for **DDC Theme**
+3. Click **Install** and restart the IDE
+
+## From Plugin JAR
 
 1. Download the latest `DDC_Theme_*.jar` from [Releases](https://github.com/ddc/ddcTheme/releases)
-2. In your JetBrains IDE, go to **Settings > Plugins > Install Plugin from Disk...**
+2. Go to **Settings > Plugins > Install Plugin from Disk...**
 3. Select the downloaded `.jar` file and restart the IDE
 
-### Manual Installation
+## Manual Installation
 
 Copy individual files to your JetBrains config directory:
 
-- `DDC_Editor_Theme.icls` &rarr; `config/colors/`
-- `DDC_Code_Style.xml` &rarr; `config/codestyles/`
-- `DDC_Key_Maps.xml` &rarr; `config/keymaps/`
+| File                    | Destination          |
+|-------------------------|----------------------|
+| `DDC_Editor_Theme.icls` | `config/colors/`     |
+| `DDC_Code_Style.xml`    | `config/codestyles/` |
+| `DDC_Key_Maps.xml`      | `config/keymaps/`    |
 
-## Building
+> **Note:** After installing, the UI theme and editor scheme apply automatically. To enable the keymap, go to *
+*Settings > Keymap** and select **DDC Key Maps**.
+
+# Building
 
 ```bash
 ./build.sh
@@ -61,7 +82,7 @@ Copy individual files to your JetBrains config directory:
 
 The script builds `DDC_Theme_<version>.jar` inside the `build/` directory.
 
-## VCS Colors
+# VCS Colors
 
 | Status                                  | Color                                                | Hex      |
 |-----------------------------------------|------------------------------------------------------|----------|
@@ -86,3 +107,19 @@ The script builds `DDC_Theme_<version>.jar` inside the `build/` directory.
 | Switched                                | ![#D1D3D9](https://placehold.co/12x12/D1D3D9/D1D3D9) | `D1D3D9` |
 | Unknown                                 | ![#9A8447](https://placehold.co/12x12/9A8447/9A8447) | `9A8447` |
 | Up to date                              | ![#D1D3D9](https://placehold.co/12x12/D1D3D9/D1D3D9) | `D1D3D9` |
+
+<p align="left">
+  <img src="assets/version_control_colors.png" alt="VCS Colors">
+</p>
+
+
+# Support
+If you find this project helpful, consider supporting development:
+
+- [GitHub Sponsor](https://github.com/sponsors/ddc)
+- [ko-fi](https://ko-fi.com/ddcsta)
+- [PayPal](https://www.paypal.com/ncp/payment/6G9Z78QHUD4RJ)
+
+
+# License
+Released under the [Apache 2.0](LICENSE)
