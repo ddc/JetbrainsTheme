@@ -16,7 +16,7 @@
 
 <p align="center">A dark theme for JetBrains IDEs based on <a href="https://github.com/atom/atom/tree/master/packages/one-dark-ui">Atom One Dark</a> colors.<br>Includes UI Theme, Editor Theme, VCS Colors, Code Style, and Key Maps.</p>
 
-<p align="center"><b><a href="https://plugins.jetbrains.com/plugin/30414-ddc-theme">Install from JetBrains Marketplace</a></b></p>
+<p align="center">🚀 <b><a href="https://plugins.jetbrains.com/plugin/30414-ddc-theme">Install from JetBrains Marketplace</a></b> 🚀</p>
 
 # Table of Contents
 
@@ -27,8 +27,8 @@
     - [From Plugin JAR](#from-plugin-jar)
     - [Manual Installation](#manual-installation)
 - [Building](#building)
-- [VCS Colors](#vcs-colors)
-- [Suport](#support)
+- [Version Control File Status Colors](#version-control-file-status-colors)
+- [Support](#support)
 - [License](#license)
 
 # Screenshot
@@ -71,8 +71,7 @@ Copy individual files to your JetBrains config directory:
 | `DDC_Code_Style.xml`    | `config/codestyles/` |
 | `DDC_Key_Maps.xml`      | `config/keymaps/`    |
 
-> **Note:** After installing, the UI theme and editor scheme apply automatically. To enable the keymap, go to *
-*Settings > Keymap** and select **DDC Key Maps**.
+> **Note:** After installing, the UI theme and editor scheme apply automatically. To enable the keymap, go to **Settings > Keymap** and select **DDC Key Maps**.
 
 # Building
 
@@ -82,7 +81,11 @@ Copy individual files to your JetBrains config directory:
 
 The script builds `DDC_Theme_<version>.jar` inside the `build/` directory.
 
-# VCS Colors
+# Version Control File Status Colors
+
+<table>
+<tr>
+<td>
 
 | Status                                  | Color                                                | Hex      |
 |-----------------------------------------|------------------------------------------------------|----------|
@@ -108,10 +111,12 @@ The script builds `DDC_Theme_<version>.jar` inside the `build/` directory.
 | Unknown                                 | ![#9A8447](https://placehold.co/12x12/9A8447/9A8447) | `9A8447` |
 | Up to date                              | ![#D1D3D9](https://placehold.co/12x12/D1D3D9/D1D3D9) | `D1D3D9` |
 
-<p align="left">
+</td>
+<td>
   <img src="assets/version_control_colors.png" alt="VCS Colors">
-</p>
-
+</td>
+</tr>
+</table>
 
 # Support
 If you find this project helpful, consider supporting development:
@@ -119,7 +124,6 @@ If you find this project helpful, consider supporting development:
 - [GitHub Sponsor](https://github.com/sponsors/ddc)
 - [ko-fi](https://ko-fi.com/ddcsta)
 - [PayPal](https://www.paypal.com/ncp/payment/6G9Z78QHUD4RJ)
-
 
 # License
 Released under the [Apache 2.0](LICENSE)

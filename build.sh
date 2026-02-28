@@ -10,12 +10,13 @@ pushd "$SCRIPT_DIR" || { log_error "Failed to change to script directory" 1>&2; 
 # ============================================================================
 # Plugin Settings — edit these and run the script to update the plugin
 # ============================================================================
-VERSION="1.0.1"
+VERSION="1.0.2"
+WHATS_NEW="Fixed VCS file status colors and editor scheme auto-apply."
+# ============================================================================
 TITLE="DDC Theme"
 EMAIL="daniel@ddcsoftwares.com"
 VENDOR_URL="https://github.com/ddc/ddcTheme"
-DESCRIPTION="DDC Theme for JetBrains IDEs based on Atom dark colors. Includes UI Theme, Editor Theme, VCS Colors, Key Maps"
-WHATS_NEW="Added keymap bundling and improved tab styling."
+DESCRIPTION="DDC Theme for JetBrains IDEs based on Atom dark colors. Includes UI Theme, Editor Theme, VCS Colors, Key Maps."
 ID="com.ddc.theme"
 MIN_JETBRAINS_VERSION="253"
 # ============================================================================
