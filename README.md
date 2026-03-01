@@ -14,7 +14,7 @@
     <br>
     <a href="https://github.com/ddc/ddcTheme/issues"><img src="https://img.shields.io/github/issues/ddc/ddcTheme?style=plastic&logo=github&logoColor=white" alt="issues"/></a>
     <a href="https://github.com/ddc/ddcTheme/actions/workflows/workflow.yml"><img src="https://img.shields.io/github/actions/workflow/status/ddc/ddcTheme/workflow.yml?style=plastic&logo=github&logoColor=white&label=CI%2FCD%20Pipeline" alt="CI/CD Pipeline"/></a>
-    <a href="https://actions-badge.atrox.dev/ddc/ddcTheme/goto?ref=main"><img src="https://img.shields.io/endpoint.svg?url=https%3A//actions-badge.atrox.dev/ddc/ddcTheme/badge?ref=main&label=build&logo=github&style=plastic" alt="Build Status"/></a>
+    <a href="https://actions-badge.atrox.dev/ddc/ddcTheme/goto?ref=master"><img src="https://img.shields.io/endpoint.svg?url=https%3A//actions-badge.atrox.dev/ddc/ddcTheme/badge?ref=master&label=build&logo=github&style=plastic" alt="Build Status"/></a>
 </p>
 
 <p align="center">A dark theme for JetBrains IDEs based on <a href="https://github.com/atom/atom/tree/master/packages/one-dark-ui">Atom One Dark</a> colors.<br>Includes UI Theme, Editor Theme, VCS Colors, and Key Maps.</p>
