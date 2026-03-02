@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/ddc/JetbrainsTheme/refs/heads/master/assets/ddcTheme-icon.svg" alt="ddcTheme" width="150">
   <br>
-  ddc Jetbrains Theme
+  DDC Jetbrains Theme
 </h1>
 
 <p align="center">
