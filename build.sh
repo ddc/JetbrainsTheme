@@ -10,12 +10,12 @@ pushd "$SCRIPT_DIR" || { log_error "Failed to change to script directory" 1>&2; 
 # ============================================================================
 # Plugin Settings — edit these and run the script to update the plugin
 # ============================================================================
-VERSION="1.0.3"
-WHATS_NEW="Fixed VCS file status colors and editor scheme auto-apply."
+VERSION="1.0.4"
+WHATS_NEW="Renamed repository to JetbrainsTheme. Note: after plugin updates, you may need to reselect the UI Theme, Editor Theme, and Key Maps in Settings."
 # ============================================================================
-TITLE="DDC Theme"
+TITLE="DDC Jetbrains Theme"
 EMAIL="daniel@ddcsoftwares.com"
-VENDOR_URL="https://github.com/ddc/ddcTheme"
+VENDOR_URL="https://github.com/ddc/JetbrainsTheme"
 DESCRIPTION="DDC Theme for JetBrains IDEs based on Atom dark colors. Includes UI Theme, Editor Theme, VCS Colors, and Key Maps."
 ID="com.ddc.theme"
 MIN_JETBRAINS_VERSION="253"
@@ -24,7 +24,7 @@ UI_JSON_THEME_NAME="DDC_Theme.json"
 EDITOR_ICLS_THEME_NAME="DDC_Editor_Theme.icls"
 KEYMAP_XML_NAME="DDC_Key_Maps.xml"
 BUILD_DIR="build"
-OUTPUT_PLUGIN_JAR_NAME="DDC_Theme_v${VERSION}.jar"
+OUTPUT_PLUGIN_JAR_NAME="DDC_Jetbrains_Theme_v${VERSION}.jar"
 # ============================================================================
 THEME_JSON="$(basename "${UI_JSON_THEME_NAME}" .json | tr '_' ' ').theme.json"
 EDITOR_SCHEME="$(basename "${EDITOR_ICLS_THEME_NAME}" .icls | tr '_' ' ')"

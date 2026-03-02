@@ -1,7 +1,7 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/ddc/ddcTheme/refs/heads/master/assets/ddcTheme-icon.svg" alt="ddcTheme" width="150">
+  <img src="https://raw.githubusercontent.com/ddc/JetbrainsTheme/refs/heads/master/assets/ddcTheme-icon.svg" alt="ddcTheme" width="150">
   <br>
-  DDC Theme
+  ddc Jetbrains Theme
 </h1>
 
 <p align="center">
@@ -10,11 +10,11 @@
     <br>
     <a href="https://plugins.jetbrains.com/plugin/30414-ddc-theme"><img src="https://img.shields.io/jetbrains/plugin/d/30414?style=plastic&logo=jetbrains&logoColor=white" alt="Marketplace Downloads"/></a>
     <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=plastic&logo=apache&logoColor=white" alt="License: Apache 2.0"/></a>
-    <a href="https://github.com/ddc/ddcTheme/releases/latest"><img src="https://img.shields.io/github/v/release/ddc/ddcTheme?style=plastic&logo=github&logoColor=white" alt="Release"/></a>
+    <a href="https://github.com/ddc/JetbrainsTheme/releases/latest"><img src="https://img.shields.io/github/v/release/ddc/JetbrainsTheme?style=plastic&logo=github&logoColor=white" alt="Release"/></a>
     <br>
-    <a href="https://github.com/ddc/ddcTheme/issues"><img src="https://img.shields.io/github/issues/ddc/ddcTheme?style=plastic&logo=github&logoColor=white" alt="issues"/></a>
-    <a href="https://github.com/ddc/ddcTheme/actions/workflows/workflow.yml"><img src="https://img.shields.io/github/actions/workflow/status/ddc/ddcTheme/workflow.yml?style=plastic&logo=github&logoColor=white&label=CI%2FCD%20Pipeline" alt="CI/CD Pipeline"/></a>
-    <a href="https://actions-badge.atrox.dev/ddc/ddcTheme/goto?ref=master"><img src="https://img.shields.io/endpoint.svg?url=https%3A//actions-badge.atrox.dev/ddc/ddcTheme/badge?ref=master&label=build&logo=github&style=plastic" alt="Build Status"/></a>
+    <a href="https://github.com/ddc/JetbrainsTheme/issues"><img src="https://img.shields.io/github/issues/ddc/JetbrainsTheme?style=plastic&logo=github&logoColor=white" alt="issues"/></a>
+    <a href="https://github.com/ddc/JetbrainsTheme/actions/workflows/workflow.yml"><img src="https://img.shields.io/github/actions/workflow/status/ddc/JetbrainsTheme/workflow.yml?style=plastic&logo=github&logoColor=white&label=CI%2FCD%20Pipeline" alt="CI/CD Pipeline"/></a>
+    <a href="https://actions-badge.atrox.dev/ddc/JetbrainsTheme/goto?ref=master"><img src="https://img.shields.io/endpoint.svg?url=https%3A//actions-badge.atrox.dev/ddc/JetbrainsTheme/badge?ref=master&label=build&logo=github&style=plastic" alt="Build Status"/></a>
 </p>
 
 <p align="center">A dark theme for JetBrains IDEs based on <a href="https://github.com/atom/atom/tree/master/packages/one-dark-ui">Atom One Dark</a> colors.<br>Includes UI Theme, Editor Theme, VCS Colors, and Key Maps.</p>
@@ -58,7 +58,7 @@
 3. Click **Install** and restart the IDE
 
 ## From Plugin JAR
-1. Download the latest `DDC_Theme_*.jar` from [Releases](https://github.com/ddc/ddcTheme/releases)
+1. Download the latest `DDC_Jetbrains_Theme_*.jar` from [Releases](https://github.com/ddc/JetbrainsTheme/releases)
 2. Go to **Settings > Plugins > Install Plugin from Disk...**
 3. Select the downloaded `.jar` file and restart the IDE
 
@@ -71,9 +71,11 @@ Copy individual files to your JetBrains config directory:
 | `DDC_Code_Style.xml`    | `config/codestyles/` |
 | `DDC_Key_Maps.xml`      | `config/keymaps/`    |
 
-> **Note:
-** After installing the plugin (Marketplace or JAR), the UI theme, editor scheme, and keymap are included. Code Style is
-**not** bundled in the plugin and must be installed manually by copying `DDC_Code_Style.xml` to `config/codestyles/`.
+> **Note:**
+> After installing the plugin (Marketplace or JAR), the UI theme, editor scheme, and keymap are included. Code Style is
+> **not** bundled in the plugin and must be installed manually by copying `DDC_Code_Style.xml` to `config/codestyles/`.
+>
+> **Note:** After plugin updates, you may need to reselect the UI Theme, Editor Theme, and Key Maps in Settings.
 
 
 # Building
