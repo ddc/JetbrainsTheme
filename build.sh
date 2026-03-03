@@ -12,8 +12,7 @@ pushd "$SCRIPT_DIR" > /dev/null || { log_error "Failed to change to script direc
 # ============================================================================
 VERSION="1.0.6"
 WHATS_NEW=$(cat <<'EOF'
-<li>Renamed plugin name to DDC Theme</li>
-<li>Removed identifier under caret highlight</li>
+<li>Added DDC Softwares Theme Icon</li>
 EOF
 )
 MIN_IDE_VERSION="253"
