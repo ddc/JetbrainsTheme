@@ -10,10 +10,16 @@ pushd "$SCRIPT_DIR" || { log_error "Failed to change to script directory" 1>&2; 
 # ============================================================================
 # Plugin Settings — edit these and run the script to update the plugin
 # ============================================================================
-VERSION="1.0.4"
-WHATS_NEW="Renamed repository to JetbrainsTheme. Note: after plugin updates, you may need to reselect the UI Theme, Editor Theme, and Key Maps in Settings."
+VERSION="1.0.5"
+WHATS_NEW=$(cat <<'NOTES'
+<ul>
+  <li>Renamed plugin name to DDC Theme</li>
+  <li>Note: after plugin updates, you may need to reselect the UI Theme, Editor Theme, and Key Maps in Settings</li>
+</ul>
+NOTES
+)
 # ============================================================================
-TITLE="DDC Jetbrains Theme"
+TITLE="DDC Theme"
 EMAIL="daniel@ddcsoftwares.com"
 VENDOR_URL="https://github.com/ddc/JetbrainsTheme"
 DESCRIPTION="DDC Theme for JetBrains IDEs based on Atom dark colors. Includes UI Theme, Editor Theme, VCS Colors, and Key Maps."
