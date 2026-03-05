@@ -19,7 +19,7 @@
     <a href="https://actions-badge.atrox.dev/ddc/JetbrainsTheme/goto?ref=master"><img src="https://img.shields.io/endpoint.svg?url=https%3A//actions-badge.atrox.dev/ddc/JetbrainsTheme/badge?ref=master&label=build&logo=github&style=plastic" alt="Build Status"/></a>
 </p>
 
-<p align="center">A dark theme for JetBrains IDEs based on <a href="https://github.com/atom/atom/tree/master/packages/one-dark-ui">Atom One Dark</a> colors.<br>Includes UI Theme, Editor Theme, VCS Colors, and Key Maps.</p>
+<p align="center">A dark theme for JetBrains IDEs based on <a href="https://github.com/atom/atom/tree/master/packages/one-dark-ui">Atom One Dark</a> colors.<br>Includes UI Theme, Editor Theme, VCS Colors, Key Maps, Code Style, Window Layout, and Selection Occurrence Highlighting.</p>
 
 <p align="center">📦 <b><a href="https://plugins.jetbrains.com/plugin/30414-ddc-theme">Install from JetBrains Marketplace</a></b> 📦 </p>
 
@@ -30,7 +30,7 @@
 - [Installation](#installation)
     - [From Marketplace](#from-marketplace)
     - [From Plugin ZIP](#from-plugin-zip)
-    - [Manual Installation](#manual-installation)
+- [Getting Started](#getting-started)
 - [Building](#building)
 - [Version Control File Status Colors](#version-control-file-status-colors)
 - [License](#license)
@@ -49,10 +49,10 @@
 | Editor Scheme               | Syntax highlighting and editor colors                                                                          |
 | VCS Colors                  | Custom file status colors for version control                                                                  |
 | Key Maps                    | Custom keyboard shortcuts                                                                                      |
+| Code Style                  | Formatting and indentation settings for multiple languages                                                     |
+| Window Layout               | Tool window arrangement and positions                                                                          |
 | Selection Highlighting      | Highlights all occurrences of selected text (disabled by default — enable in **Settings > Tools > DDC Theme**) |
 | Install/Update Notification | Shows what's new on first install or after an update                                                           |
-| Code Style                  | Formatting and indentation settings (manual install only)                                                      |
-| Window Layout               | Tool window arrangement and positions (manual install only)                                                    |
 
 # Installation
 ## From Marketplace
@@ -67,22 +67,18 @@
 2. Go to **Settings > Plugins > Install Plugin from Disk...**
 3. Select the downloaded `.zip` file and restart the IDE
 
-## Manual Installation
-Copy individual files to your JetBrains config directory:
+# Getting Started
 
-### Code Style Installation
+After install and restart, the **UI Theme**, **Editor Theme**, and **Key Maps** are applied automatically.
+The following extras are installed but not activated — enable them if you'd like:
 
-1. Copy `src/others/DDC_Code_Style.xml` to `config/codestyles/`
-2. Go to **Settings > Editor > Code Style** and select **DDC Code Style**
+| Extra                      | How to activate                                                |
+|----------------------------|----------------------------------------------------------------|
+| **Window Layout**          | **Window > Layouts > DDC Window Layout > Restore**             |
+| **Code Style**             | **Settings > Editor > Code Style** > select **DDC Code Style** |
+| **Selection Highlighting** | **Settings > Tools > DDC Theme** > enable the checkbox         |
 
-### Window Layout Installation
-
-1. Close the IDE
-2. Copy `src/others/DDC_Window_Layout.xml` to `config/options/` and rename it to `window.layouts.xml`
-3. Start the IDE
-4. Go to **Window > Layouts** and select **DDC Window Layout**
-
-> **Note:** After plugin updates, you may need to reselect the UI Theme, Editor Theme, and Key Maps in Settings.
+> **Note:** All settings are removed automatically when the plugin is uninstalled.
 
 # Building
 

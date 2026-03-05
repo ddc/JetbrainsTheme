@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Build DDC Theme plugin.
-#
+# Build DDC Theme plugin
 # https://plugins.jetbrains.com/plugin/30414-ddc-theme
 
 set -euo pipefail
@@ -12,10 +11,11 @@ VERSION="1.0.7"
 MIN_PLATFORM_VERSION="2025.3.3"
 WHATS_NEW=$(cat <<'EOF'
 <ul>
-<li>Selection occurrence highlighting - all matching text is highlighted when you select a word (disabled by deafult)</li>
-<li>Post-install/update notification</li>
-<li>Migrated to Gradle-based plugin build</li>
+<li>Window Layout available - Window > Layouts > DDC Window Layout</li>
+<li>Code Style available - Settings > Editor > Code Style > DDC Code Style</li>
+<li>Text selection highlighting - all matching text is highlighted when you select a word (disabled by default)</li>
 </ul>
+
 EOF
 )
 # ============================================================================
@@ -39,12 +39,13 @@ echo "$WHATS_NEW" > .whats_new.html
 
 ./gradlew buildPlugin "$@"
 
-# Keep only the final zip in build/
+# Keep only the final zip in build directory
 ZIP_FILE="DDC-Theme-${VERSION}.zip"
-mv "build/distributions/${ZIP_FILE}" build/
+mv "build/distributions/${ZIP_FILE}" build
 rm -rf build/classes build/distributions build/generated build/instrumented \
        build/libs build/reports build/resources build/tmp build/kotlin \
-       build/idea-sandbox .gradle .intellijPlatform .kotlin .whats_new.html
+       build/idea-sandbox .gradle .intellijPlatform .kotlin .whats_new.html \
+       gradlew.bat
 # ============================================================================
 echo
 echo -e "\033[1;92m✔\033[0m Plugin: build/${ZIP_FILE}"
