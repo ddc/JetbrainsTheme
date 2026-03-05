@@ -26,9 +26,9 @@
                   topic="com.intellij.ide.AppLifecycleListener"/>
     </applicationListeners>
     <extensions defaultExtensionNs="com.intellij">
-        <themeProvider id="com.ddc.theme" path="/theme/DDC Theme.theme.json"/>
         <bundledColorScheme path="/colors/DDC Editor Theme"/>
         <bundledKeymap file="DDC Key Maps.xml"/>
+        <themeProvider id="com.ddc.theme" path="/theme/DDC Theme.theme.json"/>
         <applicationConfigurable parentId="tools" instance="com.ddc.theme.settings.DdcThemeConfigurable" id="com.ddc.theme.settings" displayName="DDC Theme"/>
         <applicationService serviceImplementation="com.ddc.theme.settings.DdcThemeSettings"/>
         <notificationGroup id="DDC Theme Notifications" displayType="STICKY_BALLOON"/>
