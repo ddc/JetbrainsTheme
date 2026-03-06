@@ -28,13 +28,20 @@ GRADLE_BUILD_JVM_ARGS="-Xmx2g"
 pushd "$(dirname "${BASH_SOURCE[0]}")" > /dev/null
 export JAVA_HOME
 ZIP_FILE="DDC-Theme-${VERSION}.zip"
+# ============================================================================
+BLUE="\033[1;94m"
+GREEN="\033[1;92m"
+NC="\033[0m"
+log_action() { echo -e "${BLUE}➜ [ACTION]${NC} $*"; }
+log_success() { echo -e "${GREEN}✓ [SUCCESS]${NC} $*"; }
+echo
 
 
 # ============================================================================
 # Functions
 # ============================================================================
 write_gradle_properties() {
-    echo "Writing settings into gradle.properties..."
+    log_action "Writing settings into gradle.properties..."
     local since_build
     since_build="$(echo "$MIN_PLATFORM_VERSION" | sed -E 's/^20([0-9]{2})\.([0-9]+).*/\1\2/')"
     sed -i "s/^pluginVersion = .*/pluginVersion = ${VERSION}/" gradle.properties
@@ -42,11 +49,10 @@ write_gradle_properties() {
     sed -i "s/^platformVersion = .*/platformVersion = ${MIN_PLATFORM_VERSION}/" gradle.properties
     sed -i "s/^org.gradle.jvmargs = .*/org.gradle.jvmargs = ${GRADLE_BUILD_JVM_ARGS}/" gradle.properties
     echo "$WHATS_NEW" > .whats_new.html
-    echo
 }
 
 update_changelog() {
-    echo "Updating Changelog..."
+    log_action "Updating Changelog..."
     local items after
     items="$(echo "$WHATS_NEW" | sed -n 's|<li>\(.*\)</li>|- \1|p')"
     if [[ -f CHANGELOG.md ]] && grep -q "## v${VERSION}" CHANGELOG.md; then
@@ -59,31 +65,27 @@ update_changelog() {
     else
         { echo "# Changelog"; echo; echo "## v${VERSION}"; echo "$items"; echo; } > CHANGELOG.md
     fi
-    echo
 }
 
 format_kotlin() {
     if command -v ktlint &> /dev/null; then
-        echo "Running ktlint..."
+        log_action "Running ktlint..."
         ktlint --format "src/**/*.kt"
-        echo
     fi
 }
 
 verify_plugin() {
-    echo "Verifying plugin..."
+    log_action "Verifying plugin..."
     ./gradlew verifyPlugin 2>&1 | grep -E "IU-|IC-|PS-|Scheduled"
-    echo
 }
 
 build_plugin() {
-    echo "Building plugin..."
+    log_action "Building plugin..."
     ./gradlew buildPlugin
-    echo
 }
 
 cleanup_build() {
-    echo "Cleaning up build files..."
+    log_action "Cleaning up build files..."
     mv "build/distributions/${ZIP_FILE}" build
     rm -rf build/classes build/distributions build/generated build/instrumented \
            build/libs build/reports build/resources build/tmp build/kotlin \
@@ -103,5 +105,5 @@ verify_plugin
 build_plugin
 cleanup_build
 
-echo -e "\n\033[1;92m✔\033[0m Plugin: build/${ZIP_FILE}\n"
+log_success "Plugin: ./build/${ZIP_FILE}"
 popd > /dev/null
