@@ -103,6 +103,10 @@ class DdcThemeInitializer : ProjectActivity {
                 Files.writeString(markerFile, currentVersion)
             } catch (_: Exception) {
             }
+
+            // Restart IDE so keymap shortcuts bind properly at startup
+            ApplicationManager.getApplication().saveSettings()
+            ApplicationManager.getApplication().restart()
         }, ModalityState.nonModal())
     }
 

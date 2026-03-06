@@ -1,6 +1,7 @@
 # Changelog
 
 ## v1.0.7
+- Changed both themes to have 'Dark' in their names
 - Window > Layouts > DDC Window Layout
 - Settings > Editor > Code Style > DDC Code Style
 - Settings > Tools > DDC Theme (word highlighting, disabled by default)

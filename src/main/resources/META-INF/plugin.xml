@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin require-restart="true">
     <id>com.ddc.theme</id>
     <name>DDC Theme</name>
     <vendor email="daniel@ddcsoftwares.com" url="https://github.com/ddc/JetbrainsTheme">DDC Softwares</vendor>
