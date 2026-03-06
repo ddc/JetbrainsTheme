@@ -1,4 +1,4 @@
-<keymap version="1" name="DDC Key Maps" parent="$default">
+<keymap version="1" name="DDC_Keymaps" parent="$default">
   <action id="ActivateBigDataToolWindowToolWindow">
     <keyboard-shortcut first-keystroke="shift ctrl alt b" />
   </action>

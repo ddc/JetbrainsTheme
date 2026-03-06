@@ -1,9 +1,9 @@
 {
-  "name": "DDC Theme",
+  "name": "DDC Dark",
   "dark": true,
-  "author": "DDC",
-  "parentTheme": "ExperimentalDark",
-  "editorScheme": "DDC Editor Theme",
+  "author": "DDC Softwares",
+  "parentTheme": "Islands Dark",
+  "editorScheme": "DDC Editor Dark",
   "colors": {
     "Gray3": "#393B40",
     "Gray2.5": "#323438",

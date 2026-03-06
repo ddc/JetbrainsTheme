@@ -1,8 +1,8 @@
-<scheme name="DDC Editor Theme" version="142" parent_scheme="Darcula">
+<scheme name="DDC Editor Dark" version="142" parent_scheme="Default">
   <metaInfo>
     <property name="ide">Python</property>
     <property name="ideVersion">2025.3.3.0.0</property>
-    <property name="originalScheme">DDC Editor Theme</property>
+    <property name="originalScheme">DDC Editor Dark</property>
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="91B859" />
@@ -44,7 +44,7 @@
     <option name="FILESTATUS_RENAMED" value="70AEFF" />
     <option name="FILESTATUS_SUPPRESSED" value="6F737A" />
     <option name="FILESTATUS_SWITCHED" value="D1D3D9" />
-    <option name="FILESTATUS_UNKNOWN" value="9A8447" />
+    <option name="FILESTATUS_UNKNOWN" value="D69A6B" />
     <option name="FILESTATUS_addedOutside" value="629755" />
     <option name="FILESTATUS_changelistConflict" value="CF84CF" />
     <option name="FILESTATUS_modifiedOutside" value="FEDB89" />
