@@ -11,10 +11,10 @@ set -euo pipefail
 # ============================================================================
 # Variables
 # ============================================================================
-PLUGIN_VERSION="1.0.12"
-GRADLE_VERSION="9.4.0"
-KOTLIN_VERSION="2.1.0"
-INTELLIJ_PLATFORM_VERSION="2.12.0"
+PLUGIN_VERSION="1.0.13"
+GRADLE_VERSION="9.7.0"
+KOTLIN_VERSION="2.4.10"
+INTELLIJ_PLATFORM_VERSION="2.18.1"
 MIN_PLUGIN_PLATFORM_VERSION="2025.3.3"
 JAVA_HOME="$HOME/Programs/java/jdk-21"
 GRADLE_BUILD_JVM_ARGS="-Xmx2g"
@@ -22,8 +22,7 @@ OUTPUT_FILENAME="DDC-Theme-${PLUGIN_VERSION}.zip"
 # ============================================================================
 WHATS_NEW=$(cat <<'EOF'
 <ul>
-<li>Fixed debugger hover background showing white</li>
-<li>Updated code style indents to match community conventions</li>
+<li>Fixed editor selection turning light gray/white when the IDE window loses focus</li>
 </ul>
 EOF
 )
