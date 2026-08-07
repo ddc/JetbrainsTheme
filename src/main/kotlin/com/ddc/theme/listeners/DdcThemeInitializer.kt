@@ -4,6 +4,7 @@ import com.ddc.theme.settings.DdcThemeSettings
 import com.intellij.ide.plugins.cl.PluginAwareClassLoader
 import com.intellij.ide.ui.LafManager
 import com.intellij.ide.util.PropertiesComponent
+import com.intellij.notification.NotificationAction
 import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.application.ApplicationManager
@@ -87,26 +88,30 @@ class DdcThemeInitializer : ProjectActivity {
             val title = "DDC Dark Installed — v$currentVersion"
             val changeNotes = plugin.changeNotes?.trim()
             val content =
-                if (!changeNotes.isNullOrBlank()) {
-                    changeNotes
-                } else {
-                    "Plugin installed successfully."
+                buildString {
+                    append(if (!changeNotes.isNullOrBlank()) changeNotes else "Plugin installed successfully.")
+                    append("<br><br>Restart the IDE to activate the DDC keymap shortcuts.")
                 }
+
+            // The restart is offered, never forced: calling restart() from a startup activity
+            // pops the exit-confirmation dialog and blocks the EDT, which hangs headless IDE runs
             NotificationGroupManager
                 .getInstance()
                 .getNotificationGroup(NOTIFICATION_GROUP_ID)
                 .createNotification(title, content, NotificationType.INFORMATION)
-                .notify(null)
+                .addAction(
+                    NotificationAction.createSimpleExpiring("Restart IDE") {
+                        val app = ApplicationManager.getApplication()
+                        app.saveSettings()
+                        app.restart()
+                    },
+                ).notify(null)
 
             properties.setValue(LAST_VERSION_KEY, currentVersion)
             try {
                 Files.writeString(markerFile, currentVersion)
             } catch (_: Exception) {
             }
-
-            // Restart IDE so keymap shortcuts bind properly at startup
-            ApplicationManager.getApplication().saveSettings()
-            ApplicationManager.getApplication().restart()
         }, ModalityState.nonModal())
     }
 
