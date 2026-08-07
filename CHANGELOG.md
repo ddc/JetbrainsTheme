@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.13
+- Fixed editor selection turning light gray/white when the IDE window loses focus
+
 ## v1.0.12
 - Fixed debugger hover background showing white
 - Updated code style indents to match community conventions
