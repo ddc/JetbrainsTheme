@@ -1,7 +1,7 @@
 package com.ddc.theme.listeners
 
 import com.ddc.theme.settings.DdcThemeSettings
-import com.intellij.ide.plugins.PluginManagerCore
+import com.intellij.ide.plugins.cl.PluginAwareClassLoader
 import com.intellij.ide.ui.LafManager
 import com.intellij.ide.util.PropertiesComponent
 import com.intellij.notification.NotificationGroupManager
@@ -11,7 +11,6 @@ import com.intellij.openapi.application.ModalityState
 import com.intellij.openapi.application.PathManager
 import com.intellij.openapi.diagnostic.logger
 import com.intellij.openapi.editor.colors.EditorColorsManager
-import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.keymap.ex.KeymapManagerEx
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.startup.ProjectActivity
@@ -33,7 +32,6 @@ import java.nio.file.StandardCopyOption
 class DdcThemeInitializer : ProjectActivity {
     companion object {
         private val LOG = logger<DdcThemeInitializer>()
-        private const val PLUGIN_ID = "com.ddc.theme"
         private const val LAST_VERSION_KEY = "ddc.theme.lastNotifiedVersion"
         private const val NOTIFICATION_GROUP_ID = "DDC Theme Notifications"
         private const val THEME_NAME = "DDC Dark"
@@ -53,7 +51,9 @@ class DdcThemeInitializer : ProjectActivity {
 
         PluginCleanupListener.register()
 
-        val plugin = PluginManagerCore.getPlugin(PluginId.getId(PLUGIN_ID)) ?: return
+        // Resolve our own descriptor via the plugin classloader: PluginManagerCore.getPlugin()
+        // is @ApiStatus.Internal since 262, while PluginAwareClassLoader is only @NonExtendable
+        val plugin = (javaClass.classLoader as? PluginAwareClassLoader)?.pluginDescriptor ?: return
         val currentVersion = plugin.version
         val pluginDir = plugin.pluginPath.let { if (Files.isDirectory(it)) it else it.parent }
         val markerFile = pluginDir.resolve(".initialized")
