@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.14
+- Maintenance release - no functional changes since 1.0.13
+
 ## v1.0.13
 - Fixed editor selection turning light gray/white when the IDE window loses focus
 

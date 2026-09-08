@@ -11,9 +11,9 @@ set -euo pipefail
 # ============================================================================
 # Variables
 # ============================================================================
-PLUGIN_VERSION="1.0.13"
-GRADLE_VERSION="9.7.0"
-KOTLIN_VERSION="2.4.10"
+PLUGIN_VERSION="1.0.14"
+GRADLE_VERSION="9.7.1"
+KOTLIN_VERSION="2.4.20"
 INTELLIJ_PLATFORM_VERSION="2.18.1"
 MIN_PLUGIN_PLATFORM_VERSION="2025.3.3"
 JAVA_HOME="$HOME/Programs/java/jdk-21"
@@ -22,7 +22,7 @@ OUTPUT_FILENAME="DDC-Theme-${PLUGIN_VERSION}.zip"
 # ============================================================================
 WHATS_NEW=$(cat <<'EOF'
 <ul>
-<li>Fixed editor selection turning light gray/white when the IDE window loses focus</li>
+<li>Maintenance release - no functional changes since 1.0.13</li>
 </ul>
 EOF
 )
